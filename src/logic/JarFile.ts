@@ -22,9 +22,9 @@ const debouncedSearchQuery: Observable<string> = searchQuery.pipe(
 );
 
 export type SearchResult =
-    | { type: "classes"; value: ClassFilePath }
-    | { type: "methods"; value: Method }
-    | { type: "fields"; value: Field };
+    | { type: "classes"; value: ClassFilePath; }
+    | { type: "methods"; value: Method; }
+    | { type: "fields"; value: Field; };
 
 function memberSearchText(member: Method | Field): string {
     return member.split(":")[1] || member;
